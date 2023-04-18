@@ -1,0 +1,90 @@
+export const commonStyles = (theme) => ({
+	heroText: {
+		"&.MuiTypography-root": {
+			fontFamily: "Solway",
+			fontSize: "40px",
+			color: "#FFF",
+			fontWeight: "400",
+		},
+		width: "388px",
+	},
+	heroSection: {
+		position: "relative",
+		width: "95%",
+		aspectRatio: "auto",
+		maxWidth: "1464px",
+		display: "flex",
+		alignItems: "center",
+		borderRadius: "50px",
+	},
+	textWrapper: {
+		objectFit: "cover",
+		position: "absolute",
+		display: "flex",
+		alignItems: "center",
+		padding: "0 72px",
+		height: "100%",
+		width: "100%",
+		background:
+			"linear-gradient(90deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0) 100%)",
+		borderRadius: "10px",
+	},
+	whoWeAreSection: {
+		"&.MuiPaper-root": {
+			width: "95%",
+			maxWidth: "1464px",
+			height: "409px",
+			backgroundColor: "#F1F1F1",
+			display: "flex",
+			alignItems: "center",
+			padding: "30px ",
+			gap: "30px",
+		},
+	},
+	whoWeAreText: {
+		height: "100%",
+		width: "100%",
+		maxWidth: "708px",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "flex-start",
+	},
+	whoWeAreTextHeader: {
+		"&.MuiTypography-root": {
+			marginBottom: "10px",
+			fontSize: "28px",
+			fontWeight: "600",
+			lineHeight: "38px",
+		},
+	},
+	whoWeAreTextDescription: {
+		width: "100%",
+		"&.MuiTypography-root": {
+			color: "#1A1A1A",
+			lineHeight: "24px",
+			fontSize: "18px",
+			opacity: "0.6",
+			color: "#1A1A1A",
+			maxHeight: "196px",
+			overflow: "hidden",
+			textOverflow: "ellipsis",
+		},
+	},
+	whoWeAreImg: {
+		width: "50%",
+		maxWidth: "660px",
+	},
+	whoWeAreButton: {
+		width: "30%",
+		height: "64px",
+		"&.MuiButton-root": {
+			fontWeight: "600",
+			marginTop: "10px",
+			fontSize: "18px",
+			color: "#002550",
+			textTransform: "none",
+			borderColor: "#002550",
+		},
+	},
+})
