@@ -122,6 +122,7 @@ export const commonStyles = (theme) => ({
 		"&.MuiTypography-root": {
 			marginTop: "20px",
 			fontSize: "16px",
+			marginBottom: "35px",
 		},
 	},
 	tabsWrapper: {
@@ -129,7 +130,6 @@ export const commonStyles = (theme) => ({
 		display: "flex",
 		justifyContent: "center",
 		gap: "30px",
-		marginTop: "35px",
 		borderRadius: "2.5px",
 	},
 	tab: {
@@ -189,6 +189,9 @@ export const commonStyles = (theme) => ({
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
+		"&:hover": {
+			boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
+		},
 	},
 	contentWrapper: {
 		"&.MuiCardContent-root": {

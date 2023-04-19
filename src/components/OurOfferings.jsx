@@ -44,7 +44,7 @@ export default function OurOfferings({ title }) {
 						<Typography className={classes.sectionDescription}>
 							This Real Estate purchase journey can be divided into three
 							stages. For more details,{" "}
-							<Link to='/' className={classes.linkHighlighted}>
+							<Link to='/offerings' className={classes.linkHighlighted}>
 								Click Here
 							</Link>
 						</Typography>
