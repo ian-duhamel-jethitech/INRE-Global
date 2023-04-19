@@ -11,6 +11,7 @@ export const commonStyles = (theme) => ({
 	heroSection: {
 		position: "relative",
 		width: "95%",
+		height: "480px",
 		aspectRatio: "auto",
 		maxWidth: "1464px",
 		display: "flex",
@@ -72,7 +73,9 @@ export const commonStyles = (theme) => ({
 		},
 	},
 	whoWeAreImg: {
+		objectFit: "cover",
 		width: "50%",
+		height: "100%",
 		maxWidth: "660px",
 	},
 	whoWeAreButton: {
@@ -234,6 +237,77 @@ export const commonStyles = (theme) => ({
 			color: "#002550",
 			textTransform: "none",
 			borderColor: "#002550",
+		},
+	},
+	ourTeamBlogs: {
+		width: "100%",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		backgroundColor: "#F2F4F6",
+		paddingTop: "35px",
+		paddingBottom: "35px",
+		gap: "70px",
+	},
+	titleContainer: {
+		width: "100%",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+	},
+	ourTeamHr: {
+		width: "54px",
+		height: "5px",
+		backgroundColor: "#002550",
+	},
+	ourTeamCardsWrapper: {
+		width: "100%",
+		maxWidth: "1464px",
+		display: "flex",
+		gap: "46px",
+		marginTop: "35px",
+		justifyContent: "center",
+	},
+	ourTeamCard: {
+		width: "100%",
+		height: "680px",
+		maxWidth: "456px",
+		padding: "30px 24px",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		"&:hover": {
+			boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
+		},
+	},
+	nameAndRole: {
+		display: "flex",
+		justifyContent: "space-between",
+		height: "40px",
+		alignItems: "center",
+		marginBottom: "22px",
+	},
+	cardRole: {
+		"&.MuiTypography-root": {
+			fontSize: "24px",
+			color: "#1A1A1A",
+			opacity: "0.6",
+			fontWeight: "600",
+		},
+	},
+	ourTeamCardTitle: {
+		"&.MuiTypography-root": {
+			fontSize: "28px",
+			fontWeight: "600",
+		},
+	},
+	ourTeamCardDescription: {
+		"&.MuiTypography-root": {
+			fontSize: "16px",
+			fontWeight: "400",
+			lineHeight: "22px",
+			color: "#1A1A1A",
+			opacity: "0.6",
 		},
 	},
 })

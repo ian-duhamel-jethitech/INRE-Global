@@ -7,6 +7,7 @@ import { commonStyles } from "./styles/commonStyles"
 import WhoWeAreSection from "../components/WhoWeAreSection"
 import OurOfferings from "../components/OurOfferings"
 import ContactForm from "../components/ContactForm"
+import OurTeamBlogs from "../components/OurTeamBlogs"
 
 const useStyles = makeStyles(commonStyles)
 
@@ -24,6 +25,7 @@ const Homepage = () => {
 			</HeroSection>
 			<WhoWeAreSection />
 			<OurOfferings title={true} />
+			<OurTeamBlogs />
 			<ContactForm />
 		</Box>
 	)

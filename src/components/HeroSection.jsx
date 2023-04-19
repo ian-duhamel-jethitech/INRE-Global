@@ -15,7 +15,11 @@ const HeroSection = ({ banner, children }) => {
 					<Typography className={classes.heroText}>{children}</Typography>
 				</Box>
 			)}
-			<img style={{ width: "100%" }} src={banner} alt='rectangle' />
+			<img
+				style={{ width: "100%", objectFit: "cover", height: "100%" }}
+				src={banner}
+				alt='rectangle'
+			/>
 		</Box>
 	)
 }

@@ -43,6 +43,8 @@ export const navbarStyles = (theme) => ({
 		"&.MuiListItem-root": {
 			cursor: "pointer",
 			padding: "22px 0",
+			textDecoration: "none",
+			color: "#002550",
 			textAlign: "center",
 			display: "flex",
 			justifyContent: "center",
@@ -50,10 +52,6 @@ export const navbarStyles = (theme) => ({
 				borderBottom: "4px solid #002550",
 			},
 		},
-	},
-	navLink: {
-		textDecoration: "none",
-		color: "#002550",
 	},
 	navOptionsText: {
 		"&.MuiTypography-root": {

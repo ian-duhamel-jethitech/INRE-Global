@@ -1,7 +1,7 @@
 import { useTheme } from "@mui/material/styles"
 import { makeStyles } from "@mui/styles"
 import { navbarStyles } from "./styles/navbarStyles"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { Box, Button, Typography, List, ListItem } from "@mui/material"
 import WhiteLogo from "../assets/logo/WhiteLogo.png"
 
@@ -29,12 +29,15 @@ const Navbar = () => {
 				<Box className={classes.navbarRight}>
 					<List className={classes.navigation}>
 						{navbarItems.map((item) => (
-							<ListItem className={classes.navOptions} key={item.text}>
-								<Link to={item.link} className={classes.navLink}>
-									<Typography className={classes.navOptionsText}>
-										{item.text}
-									</Typography>
-								</Link>
+							<ListItem
+								component={Link}
+								to={item.link}
+								className={classes.navOptions}
+								key={item.text}
+							>
+								<Typography className={classes.navOptionsText}>
+									{item.text}
+								</Typography>
 							</ListItem>
 						))}
 						<ListItem>

@@ -6,8 +6,13 @@ export const formStyles = (theme) => ({
 		display: "flex",
 		justifyContent: "space-between",
 		boxShadow: "rgba(0, 0, 0, 0.05) 0px 0px 10px",
+		[theme.breakpoints.down("lg")]: {
+			flexDirection: "column-reverse",
+			alignItems: "center",
+			boxShadow: "none",
+			padding: "0",
+		},
 	},
-
 	formTitle: {
 		"&.MuiTypography-root": {
 			fontSize: "28px",
@@ -33,10 +38,14 @@ export const formStyles = (theme) => ({
 	imgContainer: {
 		display: "flex",
 		width: "40%",
+		[theme.breakpoints.down("lg")]: {
+			display: "none",
+		},
 	},
 	img: {
 		borderRadius: "5px",
-		objectFit: "contain",
+		objectFit: "cover",
+		height: "100%",
 		width: "100%",
 	},
 	contactUsSection: {
@@ -45,6 +54,11 @@ export const formStyles = (theme) => ({
 	},
 	formLeftSide: {
 		width: "60%",
+	},
+	titleContainer: {
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
 	},
 	sectionTitle: {
 		display: "flex",

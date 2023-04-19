@@ -26,21 +26,26 @@ const ContactForm = () => {
 	}
 	return (
 		<section className={classes.contactUs}>
-			<Typography className={classes.sectionTitle}>
-				Contact Us
+			<Box className={classes.titleContainer}>
+				<Typography className={classes.sectionTitle}>Contact Us</Typography>
 				<hr className={classes.offeringsHr} />
-			</Typography>
+			</Box>
 			<Box id='contactUs' className={classes.formContainer}>
 				<Box className={classes.formLeftSide}>
 					<Typography className={classes.formTitle}>
 						Please provide below details
 					</Typography>
 					<Box>
-						<Grid container rowSpacing={"48px"} columnSpacing={"24px"}>
-							<Grid item lg={6}>
+						<Grid
+							container
+							rowSpacing={"48px"}
+							columnSpacing={"24px"}
+							className={classes.Grid}
+						>
+							<Grid item>
 								<TextField label='Full name' className={classes.formInput} />
 							</Grid>
-							<Grid item lg={6}>
+							<Grid item>
 								<TextField
 									placeholder='example@gmail.com'
 									label='Email address'
@@ -48,7 +53,7 @@ const ContactForm = () => {
 									className={classes.formInput}
 								/>
 							</Grid>
-							<Grid item lg={6}>
+							<Grid item>
 								<MuiTelInput
 									defaultCountry='IN'
 									placeholder={"9876543210"}
@@ -58,7 +63,7 @@ const ContactForm = () => {
 								/>
 							</Grid>
 
-							<Grid item lg={6}>
+							<Grid item>
 								<Autocomplete
 									options={Countries}
 									getOptionLabel={(option) => option.label}
@@ -92,7 +97,7 @@ const ContactForm = () => {
 									)}
 								/>
 							</Grid>
-							<Grid item lg={6}>
+							<Grid item>
 								<Autocomplete
 									disablePortal
 									options={stages}
