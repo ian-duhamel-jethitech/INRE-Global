@@ -5,6 +5,7 @@ import { makeStyles } from "@mui/styles"
 import { useTheme } from "@mui/material"
 import { commonStyles } from "./styles/commonStyles"
 import WhoWeAreSection from "../components/WhoWeAreSection"
+import OurOfferings from "../components/OurOfferings"
 
 const useStyles = makeStyles(commonStyles)
 
@@ -21,6 +22,7 @@ const Homepage = () => {
 				purchase journey faster, reliable and transparent
 			</HeroSection>
 			<WhoWeAreSection />
+			<OurOfferings title={true} />
 		</Box>
 	)
 }
