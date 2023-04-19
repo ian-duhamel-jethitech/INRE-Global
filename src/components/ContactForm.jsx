@@ -20,7 +20,11 @@ const ContactForm = () => {
 	const theme = useTheme()
 	const classes = useStyles(theme)
 	const [phone, setPhone] = useState("")
-	const stages = ["I have booked, but my reservation is not done"]
+	const stages = [
+		"I have booked, but my reservation is not done",
+		"I am still searching",
+		"I have registered, and taken possession",
+	]
 	const handleChange = (newPhone) => {
 		setPhone(newPhone)
 	}
