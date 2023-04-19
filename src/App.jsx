@@ -6,7 +6,7 @@ import Footer from "./components/Footer"
 
 function App() {
 	return (
-		<div className='App' style={{ overflowX: "hidden" }}>
+		<div className='App'>
 			<BrowserRouter>
 				<Navbar />
 				<Routes>

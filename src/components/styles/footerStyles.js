@@ -4,7 +4,7 @@ export const footerStyles = (theme) => ({
 		justifyContent: "center",
 		height: "380px",
 		backgroundColor: theme.palette.primary.main,
-		width: "100vw",
+		width: "100%",
 	},
 	sectionWrapper: {
 		display: "flex",

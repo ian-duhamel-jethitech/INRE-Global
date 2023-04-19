@@ -1,7 +1,7 @@
 export const commonStyles = (theme) => ({
 	homepage: {
 		padding: "70px 0",
-		width: "100vw",
+		width: "100%",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",

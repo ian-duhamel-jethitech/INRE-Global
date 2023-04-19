@@ -5,13 +5,13 @@ export const navbarStyles = (theme) => ({
 		justifyContent: "center",
 		boxShadow: "0px 0px 6px 0px rgba(0,0,0,0.75)",
 		height: "108px",
-		width: "100vw",
+		width: "100%",
 	},
 	navbar: {
 		display: "flex",
 		position: "relative",
 		width: "100%",
-		maxWidth: "1400px",
+		maxWidth: "1464px",
 	},
 	navbarLeft: {
 		display: "flex",
