@@ -14,6 +14,16 @@ export const commonStyles = (theme) => ({
 		flexDirection: "column",
 		alignItems: "center",
 	},
+	ourTeamBlogs: {
+		width: "100%",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		backgroundColor: "#F2F4F6",
+		paddingTop: "35px",
+		paddingBottom: "35px",
+		gap: "70px",
+	},
 
 	heroText: {
 		"&.MuiTypography-root": {
@@ -70,5 +80,22 @@ export const commonStyles = (theme) => ({
 	},
 	teamMemberImg: {
 		width: "120px",
+	},
+	blogPage: {
+		width: "100%",
+		paddingTop: "70px",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+	},
+	blogs: {
+		width: "100%",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		backgroundColor: "#F2F4F6",
+		paddingTop: "35px",
+		marginTop: "70px",
+		paddingBottom: "35px",
 	},
 })

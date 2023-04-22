@@ -26,21 +26,23 @@ export default function OurOfferings({ title }) {
 	const theme = useTheme()
 	const classes = useStyles(theme)
 	const [activeTab, setActiveTab] = useState(1)
-	const cardContentSelected =
-		activeTab === 1
-			? PreBooking
-			: activeTab === 2
-			? PostBooking
-			: PostRegistration
+	const content = [PreBooking, PostBooking, PostRegistration]
+	const cardContentSelected = content[activeTab - 1]
 	return (
 		<>
 			<Box className={classes.offeringsSection}>
 				{title && (
 					<>
-						<Typography className={classes.sectionTitle}>
-							Our Offerings
-						</Typography>
-						<hr className={classes.offeringsHr} />
+						<Box
+							className={classes.titleContainer}
+							to='/offerings'
+							component={Link}
+						>
+							<Typography className={classes.sectionTitle}>
+								Our Offerings
+							</Typography>
+							<hr className={classes.offeringsHr} />
+						</Box>
 						<Typography className={classes.sectionDescription}>
 							This Real Estate purchase journey can be divided into three
 							stages. For more details,{" "}

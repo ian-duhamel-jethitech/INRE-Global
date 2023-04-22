@@ -1,7 +1,7 @@
 import { useTheme } from "@mui/material/styles"
 import { makeStyles } from "@mui/styles"
 import { navbarStyles } from "./styles/navbarStyles"
-import { Link, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { Box, Button, Typography, List, ListItem } from "@mui/material"
 import WhiteLogo from "../assets/logo/WhiteLogo.png"
 
@@ -10,9 +10,9 @@ const useStyles = makeStyles(navbarStyles)
 const navbarItems = [
 	{ text: "Home", link: "/" },
 	{ text: "Our Offerings", link: "/offerings" },
-	{ text: "Our Team", link: "/ourteam" },
+	{ text: "Our Team", link: "/team" },
 	{ text: "Contact Us", link: "/contactus" },
-	{ text: "Blogs", link: "/" },
+	{ text: "Blogs", link: "/blogs" },
 ]
 
 const Navbar = () => {

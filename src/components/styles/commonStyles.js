@@ -57,7 +57,6 @@ export const commonStyles = (theme) => ({
 			lineHeight: "24px",
 			fontSize: "18px",
 			opacity: "0.6",
-			color: "#1A1A1A",
 			maxHeight: "196px",
 			overflow: "hidden",
 			textOverflow: "ellipsis",
@@ -230,33 +229,26 @@ export const commonStyles = (theme) => ({
 			borderColor: "#002550",
 		},
 	},
-	ourTeamBlogs: {
-		width: "100%",
-		display: "flex",
-		flexDirection: "column",
-		alignItems: "center",
-		backgroundColor: "#F2F4F6",
-		paddingTop: "35px",
-		paddingBottom: "35px",
-		gap: "70px",
-	},
+
 	titleContainer: {
 		width: "100%",
+		marginBottom: "35px",
+
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
+		textDecoration: "none",
 	},
 	ourTeamHr: {
 		width: "54px",
 		height: "5px",
 		backgroundColor: "#002550",
 	},
-	ourTeamCardsWrapper: {
+	ourTeamCardWrapper: {
 		width: "100%",
 		maxWidth: "1464px",
 		display: "flex",
 		gap: "46px",
-		marginTop: "35px",
 		justifyContent: "center",
 	},
 	ourTeamCard: {
@@ -300,5 +292,66 @@ export const commonStyles = (theme) => ({
 			color: "#1A1A1A",
 			opacity: "0.6",
 		},
+	},
+	blogsHr: {
+		width: "54px",
+		height: "5px",
+		backgroundColor: "#002550",
+	},
+	blogsDateContainer: {
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "space-between",
+		marginBottom: "30px",
+		"& .MuiBox-root": {
+			display: "flex",
+			alignItems: "center",
+			gap: "14px",
+			"& .MuiSvgIcon-root": {
+				width: "20px",
+				height: "20px",
+			},
+		},
+	},
+	blogsDate: {
+		"&.MuiTypography-root": {
+			fontSize: "16px",
+			fontWeight: "600",
+		},
+	},
+	cardAuthor: {
+		"&.MuiTypography-root": {
+			fontWeight: "600",
+			color: "#1A1A1A",
+			opacity: "0.6",
+		},
+	},
+	blogTitle: {
+		"&.MuiTypography-root": {
+			fontSize: "28px",
+			fontWeight: "600",
+			marginBottom: "10px",
+		},
+	},
+	blogsCard: {
+		width: "100%",
+		borderRadius: "10px",
+		height: "100%",
+		minHeight: "724px",
+		maxWidth: "456px",
+		padding: "30px 24px",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		"&:hover": {
+			boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
+		},
+	},
+	blogsCardWrapper: {
+		width: "100%",
+		maxWidth: "1464px",
+		display: "flex",
+		gap: "46px",
+		justifyContent: "center",
 	},
 })

@@ -1,13 +1,13 @@
-import { Box, Container, Typography } from "@mui/material"
+import { Box, useTheme, Typography } from "@mui/material"
 import HeroSection from "../components/HeroSection"
 import homeBanner from "../assets/banners/homeBanner.png"
 import { makeStyles } from "@mui/styles"
-import { useTheme } from "@mui/material"
 import { commonStyles } from "./styles/commonStyles"
 import WhoWeAreSection from "../components/WhoWeAreSection"
 import OurOfferings from "../components/OurOfferings"
 import ContactForm from "../components/ContactForm"
-import OurTeamBlogs from "../components/OurTeamBlogs"
+import OurTeam from "../components/OurTeam"
+import Blogs from "../components/Blogs"
 
 const useStyles = makeStyles(commonStyles)
 
@@ -27,7 +27,10 @@ const Homepage = () => {
 			</HeroSection>
 			<WhoWeAreSection />
 			<OurOfferings title={true} />
-			<OurTeamBlogs />
+			<section className={classes.ourTeamBlogs}>
+				<OurTeam />
+				<Blogs title />
+			</section>
 			<ContactForm />
 		</Box>
 	)

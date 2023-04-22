@@ -1,8 +1,7 @@
 import { makeStyles } from "@mui/styles"
-import { useTheme } from "@mui/material"
+import { Box, Typography, useTheme } from "@mui/material"
 import { commonStyles } from "./styles/commonStyles"
 import ourTeamBanner from "../assets/banners/ourTeamBanner.png"
-import { Box, Typography } from "@mui/material"
 import HeroSection from "../components/HeroSection"
 import Member1Img from "../assets/Team/image 28.png"
 import Member2Img from "../assets/Team/image 28 (1).png"
@@ -17,6 +16,7 @@ const teamMembers = [
 			"Brajesh Pathak, a professional with dual qualifications as a Chartered Accountant and Company Secretary, possesses more than ten years of expertise in overseeing venture capital funds that focus on the real estate industry. As the former head of Azure Capital Advisors Private Limited, he has served on both the managing committee and execution committee for the 100 Crore real estate-focused funds at Azure Capital. He has also played a key role in overseeing the execution committees for several special purpose vehicles of investee companies, specifically for development work, construction management, plotted development, villa projects, and apartments. In addition, he has actively participated in the fundraising process, including developing investor relationships, retail sales, and NRI relationship handling for real estate advisory. Most recently, he led the fundraising efforts of several startups, from seed round to series-B round.",
 		role: "Co-Founder",
 		image: Member1Img,
+		card: "card1",
 	},
 	{
 		name: "Deepak Shukla",
@@ -25,6 +25,7 @@ const teamMembers = [
 
 		role: "Co-Founder",
 		image: Member2Img,
+		card: "card2",
 	},
 	{
 		name: "Alok Kumar Singh",
@@ -32,6 +33,7 @@ const teamMembers = [
 			"Alok kumar Singh, An Entrepreneur with pedigree from IIT-BHU and IIML, and more than 25 years of experience in management responsibilities in top tier companies including Infosys, Infosys BPO and Azure Capital. Co-Founded Azure Capital, a Real Estate Private Equity Fund and Azven Realty, a full service Real Estate Development firm in Bangalore. Set-up and managed a SEBI registered VC fund under Azure Capital. Actively involved in mentoring and advising seed and growth stage startups  at C-Level in Visioning, Governance, Strategy Development & Implementation, Growth Planning, Goal Setting and Investment Structuring & Management.",
 		role: "Advisor",
 		image: Member3Img,
+		card: "card3",
 	},
 ]
 
@@ -39,7 +41,7 @@ export default function OurTeamPage() {
 	const theme = useTheme()
 	const classes = useStyles(theme)
 	return (
-		<section className={classes.ourTeamPage}>
+		<section className={classes.ourTeamPage} id='initial-tag'>
 			<HeroSection banner={ourTeamBanner}>
 				<Typography className={classes.heroText} style={{ width: "40%" }}>
 					Success sprouts from a great idea, fueled by
@@ -55,7 +57,11 @@ export default function OurTeamPage() {
 				</Typography>
 			</HeroSection>
 			{teamMembers.map((section) => (
-				<Box className={classes.teamMember}>
+				<Box
+					className={classes.teamMember}
+					id={section.card}
+					key={section.card}
+				>
 					<Box className={classes.teamMemberHead}>
 						<img
 							src={section.image}
