@@ -10,11 +10,7 @@ const HeroSection = ({ banner, children }) => {
 	const classes = useStyles(theme)
 	return (
 		<Box className={classes.heroSection}>
-			{children && (
-				<Box className={classes.textWrapper}>
-					<Typography className={classes.heroText}>{children}</Typography>
-				</Box>
-			)}
+			{children && <Box className={classes.textWrapper}>{children}</Box>}
 			<img
 				style={{ width: "100%", objectFit: "cover", height: "100%" }}
 				src={banner}

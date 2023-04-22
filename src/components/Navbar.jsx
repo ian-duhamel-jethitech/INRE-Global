@@ -10,8 +10,8 @@ const useStyles = makeStyles(navbarStyles)
 const navbarItems = [
 	{ text: "Home", link: "/" },
 	{ text: "Our Offerings", link: "/offerings" },
-	{ text: "Our Team", link: "/" },
-	{ text: "Contact Us", link: "/" },
+	{ text: "Our Team", link: "/ourteam" },
+	{ text: "Contact Us", link: "/contactus" },
 	{ text: "Blogs", link: "/" },
 ]
 

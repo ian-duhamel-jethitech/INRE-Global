@@ -14,11 +14,13 @@ export default function OurOfferingsPage() {
 	return (
 		<section className={classes.homepage}>
 			<HeroSection banner={bannerOfferings}>
-				We provide top-notch{" "}
-				<Typography component='span' className={classes.higlightedText}>
-					Services
-				</Typography>{" "}
-				to cater to the needs of our valued users
+				<Typography className={classes.heroText}>
+					We provide top-notch{" "}
+					<Typography component='span' className={classes.higlightedText}>
+						Services
+					</Typography>{" "}
+					to cater to the needs of our valued users
+				</Typography>
 			</HeroSection>
 			<OurOfferings />
 		</section>

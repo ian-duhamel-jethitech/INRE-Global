@@ -1,13 +1,4 @@
 export const commonStyles = (theme) => ({
-	heroText: {
-		"&.MuiTypography-root": {
-			fontFamily: "Solway",
-			fontSize: "40px",
-			color: "#FFF",
-			fontWeight: "400",
-		},
-		width: "388px",
-	},
 	heroSection: {
 		position: "relative",
 		width: "95%",

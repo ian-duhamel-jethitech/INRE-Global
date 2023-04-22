@@ -17,11 +17,13 @@ const Homepage = () => {
 	return (
 		<Box className={classes.homepage}>
 			<HeroSection banner={homeBanner}>
-				Making your{" "}
-				<Typography component='span' className={classes.higlightedText}>
-					Real Estate
-				</Typography>{" "}
-				purchase journey faster, reliable and transparent
+				<Typography className={classes.heroText}>
+					Making your{" "}
+					<Typography component='span' className={classes.higlightedText}>
+						Real Estate
+					</Typography>{" "}
+					purchase journey faster, reliable and transparent
+				</Typography>
 			</HeroSection>
 			<WhoWeAreSection />
 			<OurOfferings title={true} />

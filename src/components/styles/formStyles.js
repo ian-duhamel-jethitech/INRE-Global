@@ -79,4 +79,36 @@ export const formStyles = (theme) => ({
 		backgroundColor: "#002550",
 		textAlign: "center",
 	},
+	homepage: {
+		padding: "70px 0",
+		width: "100%",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		gap: "70px",
+	},
+	higlightedText: {
+		"&.MuiTypography-root": {
+			fontFamily: "Solway",
+			fontWeight: "700",
+			fontSize: "40px",
+		},
+	},
+	formPageSection: {
+		padding: "35px 86px",
+		width: "100%",
+		display: "flex",
+		flexDirection: "column",
+		maxWidth: "1464px",
+		boxShadow: " 0px 0px 10px rgba(0, 0, 0, 0.05)",
+	},
+	heroText: {
+		"&.MuiTypography-root": {
+			fontFamily: "Solway",
+			fontSize: "40px",
+			color: "#FFF",
+			fontWeight: "400",
+		},
+		width: "35%",
+	},
 })
