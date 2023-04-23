@@ -18,14 +18,13 @@ const useStyles = makeStyles(commonStyles)
 
 export default function Blogs({ title }) {
 	const theme = useTheme()
-	const nav = useNavigate()
 	const classes = useStyles(theme)
 	return (
 		<Box className={classes.blogsSection}>
 			{title && (
 				<>
 					<Box className={classes.titleContainer} to='/blogs' component={Link}>
-						<Typography className={classes.sectionTitle}>Blogs</Typography>
+						<Typography className={classes.sectionTitle}>{title}</Typography>
 						<hr className={classes.blogsHr} />
 					</Box>
 				</>
@@ -58,7 +57,9 @@ export default function Blogs({ title }) {
 						<CardActions className={classes.cardActions}>
 							<Button
 								variant='outlined'
-								onClick={() => nav("/team")}
+								component={Link}
+								reloadDocument
+								to={`/blogs/${card.id}`}
 								className={classes.cardButton}
 							>
 								View More

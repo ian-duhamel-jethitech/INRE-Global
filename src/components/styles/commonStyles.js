@@ -233,7 +233,6 @@ export const commonStyles = (theme) => ({
 	titleContainer: {
 		width: "100%",
 		marginBottom: "35px",
-
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",

@@ -29,7 +29,7 @@ const Homepage = () => {
 			<OurOfferings title={true} />
 			<section className={classes.ourTeamBlogs}>
 				<OurTeam />
-				<Blogs title />
+				<Blogs title={"Blogs"} />
 			</section>
 			<ContactForm />
 		</Box>

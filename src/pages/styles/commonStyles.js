@@ -81,7 +81,7 @@ export const commonStyles = (theme) => ({
 	teamMemberImg: {
 		width: "120px",
 	},
-	blogPage: {
+	blogsPage: {
 		width: "100%",
 		paddingTop: "70px",
 		display: "flex",
@@ -97,5 +97,109 @@ export const commonStyles = (theme) => ({
 		paddingTop: "35px",
 		marginTop: "70px",
 		paddingBottom: "35px",
+	},
+	blogPage: {
+		width: "100%",
+		paddingTop: "35px",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+	},
+	goBack: {
+		width: "100%",
+		maxWidth: "1464px",
+		display: "flex",
+		justifyContent: "flex-start",
+	},
+	goBackText: {
+		display: "flex",
+		alignItems: "center",
+		"&.MuiTypography-root": {
+			textDecoration: "none",
+			color: "#1a1a1a",
+			fontSize: "20px",
+			fontWeight: "400",
+			marginBottom: "35px",
+		},
+		"& .MuiSvgIcon-root": {
+			color: "#1a1a1a",
+			fontSize: "20px",
+			marginRight: "10px",
+			cursor: "pointer",
+		},
+	},
+	blogSection: {
+		width: "90%",
+		maxWidth: "1464px",
+		marginTop: "35px",
+		marginBottom: "70px",
+	},
+	blogDate: {
+		display: "flex",
+		alignItems: "center",
+		"&.MuiTypography-root": {
+			fontSize: "24px",
+		},
+		"& .MuiSvgIcon-root": {
+			width: "20px",
+			height: "20px",
+			marginRight: "14px",
+		},
+	},
+	blogsDateContainer: {
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "space-between",
+		marginBottom: "30px",
+		"& .MuiBox-root": {
+			display: "flex",
+			alignItems: "center",
+			gap: "14px",
+		},
+	},
+	blogHeader: {
+		width: "100%",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "space-between",
+		marginBottom: "35px",
+	},
+	blogsDate: {
+		"&.MuiTypography-root": {
+			fontSize: "16px",
+			fontWeight: "600",
+		},
+	},
+	blogAuthor: {
+		"&.MuiTypography-root": {
+			fontSize: "24px",
+			fontWeight: "600",
+			color: "#1A1A1A",
+			opacity: "0.6",
+		},
+	},
+	blogDescription: {
+		"&.MuiTypography-root": {
+			fontSize: "24px",
+			fontWeight: "600",
+			color: "#1A1A1A",
+			opacity: "0.6",
+			marginBottom: "35px",
+		},
+	},
+	blogHr: {
+		backgroundColor: "#ccd3dc",
+	},
+	blogButtons: {
+		margin: "35px 0 ",
+		width: "100%",
+		display: "flex",
+		justifyContent: "space-between",
+		"& .MuiButton-root": {
+			width: "200px",
+			padding: "12px",
+			fontSize: "18px",
+			fontWeight: "600",
+		},
 	},
 })

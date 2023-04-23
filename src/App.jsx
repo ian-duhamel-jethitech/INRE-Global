@@ -6,6 +6,7 @@ import Footer from "./components/Footer"
 import ContactUsPage from "./pages/ContactUsPage"
 import OurTeamPage from "./pages/OurTeamPage"
 import BlogsPage from "./pages/BlogsPage"
+import BlogPage from "./pages/BlogPage"
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route path='/contactus' element={<ContactUsPage />} />
 					<Route path='/team' element={<OurTeamPage />} />
 					<Route path='/blogs' element={<BlogsPage />} />
+					<Route path='/blogs/:id' element={<BlogPage />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

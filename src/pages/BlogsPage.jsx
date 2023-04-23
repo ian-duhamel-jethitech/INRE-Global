@@ -11,7 +11,7 @@ export default function BlogsPage() {
 	const theme = useTheme()
 	const classes = useStyles(theme)
 	return (
-		<section className={classes.blogPage}>
+		<section className={classes.blogsPage}>
 			<HeroSection banner={bannerOfferings}>
 				<Typography className={classes.heroText}>
 					Delve into captivating insights on the dynamic world of{" "}
