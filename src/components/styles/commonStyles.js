@@ -113,6 +113,7 @@ export const commonStyles = (theme) => ({
 		},
 	},
 	offeringsSection: {
+		marginTop: "20px",
 		width: "100%",
 		maxWidth: "1464px",
 		display: "flex",
@@ -249,6 +250,7 @@ export const commonStyles = (theme) => ({
 			boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
 		},
 		[theme.breakpoints.down("md")]: {
+			width: "90%",
 			margin: "0 auto",
 		},
 	},
@@ -360,6 +362,9 @@ export const commonStyles = (theme) => ({
 		"&:hover": {
 			boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
 		},
+		[theme.breakpoints.down("md")]: {
+			width: "90%",
+		},
 	},
 	nameAndRole: {
 		display: "flex",
@@ -406,6 +411,7 @@ export const commonStyles = (theme) => ({
 			lineHeight: "22px",
 			color: "#1A1A1A",
 			opacity: "0.6",
+			flexGrow: 1,
 			[theme.breakpoints.down("lg")]: {
 				fontSize: "12px",
 			},
@@ -456,12 +462,16 @@ export const commonStyles = (theme) => ({
 		width: "100%",
 		borderRadius: "10px",
 		maxWidth: "456px",
+		minHeight: "720px",
 		padding: "5% 7%",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
 		"&:hover": {
 			boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
+		},
+		[theme.breakpoints.down("md")]: {
+			width: "90%",
 		},
 	},
 	blogsSection: {
@@ -479,10 +489,9 @@ export const commonStyles = (theme) => ({
 		gap: "46px",
 		justifyContent: "center",
 		[theme.breakpoints.down("lg")]: {
-			gridTemplateColumns: "repeat(2, 1fr)",
 			width: "90%",
 		},
-		[theme.breakpoints.down("lg")]: {
+		[theme.breakpoints.down("md")]: {
 			gridTemplateColumns: " 1fr",
 			placeItems: "center",
 		},

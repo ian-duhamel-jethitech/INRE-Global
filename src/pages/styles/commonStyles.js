@@ -17,6 +17,9 @@ export const commonStyles = (theme) => ({
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
+		[theme.breakpoints.down("md")]: {
+			padding: "20px 0",
+		},
 	},
 	ourTeamBlogs: {
 		width: "100%",
@@ -110,6 +113,9 @@ export const commonStyles = (theme) => ({
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
+		[theme.breakpoints.down("md")]: {
+			paddingTop: "20px",
+		},
 	},
 	blogs: {
 		width: "100%",
@@ -120,6 +126,10 @@ export const commonStyles = (theme) => ({
 		paddingTop: "35px",
 		marginTop: "70px",
 		paddingBottom: "35px",
+
+		[theme.breakpoints.down("md")]: {
+			marginTop: "20px",
+		},
 	},
 	blogPage: {
 		width: "100%",
@@ -233,6 +243,10 @@ export const commonStyles = (theme) => ({
 		flexDirection: "column",
 		maxWidth: "1464px",
 		boxShadow: " 0px 0px 10px rgba(0, 0, 0, 0.05)",
+		[theme.breakpoints.down("md")]: {
+			padding: "35px 0px",
+			alignItems: "center",
+		},
 	},
 	inputContainer: {
 		position: "relative",
@@ -269,6 +283,9 @@ export const commonStyles = (theme) => ({
 			fontWeight: "600",
 			color: "#002550",
 			marginBottom: "30px",
+			[theme.breakpoints.down("md")]: {
+				textAlign: "center",
+			},
 		},
 	},
 	contactUsLink: {

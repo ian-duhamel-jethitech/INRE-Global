@@ -36,7 +36,7 @@ const Footer = () => {
 			<Box className={classes.sectionWrapper}>
 				<Box className={classes.footerTop}>
 					<Box className={classes.logoContainer}>
-						<img style={{ width: "100%" }} src={CompanyLogo} />
+						<img src={CompanyLogo} />
 					</Box>
 					<Box>
 						<Typography className={classes.footerTitle}>Company </Typography>
@@ -62,11 +62,7 @@ const Footer = () => {
 					<Box className={classes.footerContact}>
 						{contactInfo.map((info) => (
 							<Box key={info.title} className={classes.footerContactInfo}>
-								<img
-									style={{ width: "40px" }}
-									src={info.icon}
-									alt={`${info.title} logo`}
-								/>
+								<img src={info.icon} alt={`${info.title} logo`} />
 								<Box className={classes.footerContactInfoText}>
 									<Typography className={classes.footerContactInfoTitle}>
 										{info.title}

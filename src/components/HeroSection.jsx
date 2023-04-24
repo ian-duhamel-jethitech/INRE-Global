@@ -12,7 +12,12 @@ const HeroSection = ({ banner, children }) => {
 		<Box className={classes.heroSection}>
 			{children && <Box className={classes.textWrapper}>{children}</Box>}
 			<img
-				style={{ width: "100%", objectFit: "cover", height: "100%" }}
+				style={{
+					width: "100%",
+					objectFit: "cover",
+					height: "100%",
+					borderRadius: "10px",
+				}}
 				src={banner}
 				alt='rectangle'
 			/>

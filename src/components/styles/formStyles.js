@@ -24,6 +24,9 @@ export const formStyles = (theme) => ({
 	formInput: {
 		width: "100%",
 		height: "48px",
+		[theme.breakpoints.down("md")]: {
+			width: "90%",
+		},
 	},
 	formButton: {
 		gridColumn: "1/3",
@@ -34,7 +37,7 @@ export const formStyles = (theme) => ({
 			fontSize: "18px",
 			textTransform: "none",
 			[theme.breakpoints.down("md")]: {
-				width: "100%",
+				width: "90%",
 			},
 		},
 	},
@@ -59,6 +62,7 @@ export const formStyles = (theme) => ({
 		[theme.breakpoints.down("md")]: {
 			display: "flex",
 			flexDirection: "column",
+			alignItems: "center",
 			columnGap: "0",
 		},
 	},
