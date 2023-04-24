@@ -67,7 +67,7 @@ export const commonStyles = (theme) => ({
 		},
 	},
 	teamMember: {
-		width: "100%",
+		width: "90%",
 		maxWidth: "1464px",
 		padding: "45px 0",
 		borderBottom: "1.5px solid #ccd3dc",

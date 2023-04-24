@@ -8,9 +8,11 @@ export const commonStyles = (theme) => ({
 		display: "flex",
 		alignItems: "center",
 		borderRadius: "50px",
-
 		[theme.breakpoints.down("md")]: {
-			height: "50%",
+			height: "240px",
+		},
+		[theme.breakpoints.down("sm")]: {
+			height: "160px",
 		},
 	},
 	textWrapper: {
@@ -24,6 +26,9 @@ export const commonStyles = (theme) => ({
 		background:
 			"linear-gradient(90deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0) 100%)",
 		borderRadius: "10px",
+		[theme.breakpoints.down("md")]: {
+			padding: "0 24px",
+		},
 	},
 	whoWeAreSection: {
 		"&.MuiPaper-root": {
