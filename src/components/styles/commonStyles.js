@@ -8,6 +8,9 @@ export const commonStyles = (theme) => ({
 		display: "flex",
 		alignItems: "center",
 		borderRadius: "50px",
+		[theme.breakpoints.down("md")]: {
+			height: "160px",
+		},
 	},
 	textWrapper: {
 		objectFit: "cover",
@@ -31,6 +34,13 @@ export const commonStyles = (theme) => ({
 			alignItems: "center",
 			padding: "30px ",
 			gap: "30px",
+			[theme.breakpoints.down("lg")]: {
+				height: "auto",
+			},
+			[theme.breakpoints.down("md")]: {
+				flexDirection: "column",
+				gap: "10px",
+			},
 		},
 	},
 	whoWeAreText: {
@@ -48,6 +58,9 @@ export const commonStyles = (theme) => ({
 			fontSize: "28px",
 			fontWeight: "600",
 			lineHeight: "38px",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "16px",
+			},
 		},
 	},
 	whoWeAreTextDescription: {
@@ -60,6 +73,9 @@ export const commonStyles = (theme) => ({
 			maxHeight: "196px",
 			overflow: "hidden",
 			textOverflow: "ellipsis",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "12px",
+			},
 		},
 	},
 	whoWeAreImg: {
@@ -67,6 +83,9 @@ export const commonStyles = (theme) => ({
 		width: "50%",
 		height: "100%",
 		maxWidth: "660px",
+		[theme.breakpoints.down("md")]: {
+			width: "100%",
+		},
 	},
 	whoWeAreButton: {
 		width: "30%",
@@ -78,6 +97,13 @@ export const commonStyles = (theme) => ({
 			color: "#002550",
 			textTransform: "none",
 			borderColor: "#002550",
+		},
+
+		[theme.breakpoints.down("lg")]: {
+			width: "50%",
+		},
+		[theme.breakpoints.down("md")]: {
+			width: "100%",
 		},
 	},
 	offeringsSection: {
@@ -135,6 +161,10 @@ export const commonStyles = (theme) => ({
 		height: "100px",
 		backgroundColor: "#F2F4F6",
 		cursor: "pointer",
+		[theme.breakpoints.down("md")]: {
+			maxWidth: "100px",
+			flexGrow: "1",
+		},
 	},
 	tabNumber: {
 		width: "48px",
@@ -148,6 +178,11 @@ export const commonStyles = (theme) => ({
 		fontFamily: "Open Sans",
 		lineHeight: "32px",
 		marginRight: "10px",
+		[theme.breakpoints.down("md")]: {
+			marginRight: "0",
+			maxWidth: "64px",
+			backgroundColor: "transparent",
+		},
 	},
 	tabTitle: {
 		maxWidth: "199px",
@@ -159,6 +194,10 @@ export const commonStyles = (theme) => ({
 	},
 	activeTab: {
 		backgroundColor: "#CCD3DC",
+		width: "100%",
+		display: "flex",
+		justifyContent: "center",
+		maxWidth: "470px",
 	},
 	hrTab: {
 		position: "absolute",
@@ -169,14 +208,22 @@ export const commonStyles = (theme) => ({
 	},
 	cardsWrapper: {
 		width: "100%",
-		display: "flex",
+		maxWidth: "1464px",
+		display: "grid",
+		gridTemplateColumns: "repeat(3, 1fr)",
 		gap: "24px",
 		marginTop: "35px",
-		justifyContent: "center",
+		[theme.breakpoints.down("lg")]: {
+			gap: "20px",
+		},
+		[theme.breakpoints.down("md")]: {
+			gridTemplateColumns: "1fr",
+		},
 	},
 	card: {
+		position: "relative",
 		width: "100%",
-		height: "680px",
+		maxHeight: "680px",
 		maxWidth: "456px",
 		padding: "30px 24px",
 		display: "flex",
@@ -185,6 +232,9 @@ export const commonStyles = (theme) => ({
 		"&:hover": {
 			boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
 		},
+		[theme.breakpoints.down("md")]: {
+			margin: "0 auto",
+		},
 	},
 	contentWrapper: {
 		"&.MuiCardContent-root": {
@@ -192,6 +242,9 @@ export const commonStyles = (theme) => ({
 			width: "100%",
 			padding: 0,
 			flexGrow: 1,
+			[theme.breakpoints.down("md")]: {
+				marginTop: "10px",
+			},
 		},
 	},
 	cardTitle: {
@@ -199,6 +252,9 @@ export const commonStyles = (theme) => ({
 			fontSize: "28px",
 			fontWeight: "600",
 			marginBottom: "22px",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "20px",
+			},
 		},
 	},
 	cardDescription: {
@@ -208,6 +264,9 @@ export const commonStyles = (theme) => ({
 			lineHeight: "24px",
 			color: "#1A1A1A",
 			opacity: "0.6",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "12px",
+			},
 		},
 	},
 	cardActions: {
@@ -215,19 +274,31 @@ export const commonStyles = (theme) => ({
 			margin: 0,
 			padding: 0,
 			alignSelf: "flex-start",
+			width: "100%",
 		},
 	},
 	cardButton: {
 		height: "64px",
 		"&.MuiButton-root": {
 			fontWeight: "600",
+			width: "fit-content",
 			padding: "0px 40px",
 			marginTop: "10px",
 			fontSize: "18px",
 			color: "#002550",
 			textTransform: "none",
 			borderColor: "#002550",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "16px",
+				width: "100%",
+			},
 		},
+	},
+	ourTeamSection: {
+		width: "100%",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
 	},
 
 	titleContainer: {
@@ -246,16 +317,28 @@ export const commonStyles = (theme) => ({
 	ourTeamCardWrapper: {
 		width: "100%",
 		maxWidth: "1464px",
-		display: "flex",
+		display: "grid",
+		gridTemplateColumns: "repeat(3, 1fr)",
 		gap: "46px",
 		justifyContent: "center",
+		[theme.breakpoints.down("lg")]: {
+			gap: "20px",
+			width: "90%",
+		},
+		[theme.breakpoints.down("md")]: {
+			gridTemplateColumns: "1fr",
+			placeItems: "center",
+			width: "100%",
+		},
 	},
 	ourTeamCard: {
+		position: "relative",
 		width: "100%",
-		height: "680px",
+		maxHeight: "680px",
 		maxWidth: "456px",
-		padding: "30px 24px",
+		padding: "5% 7%",
 		display: "flex",
+		borderRadius: "10px",
 		flexDirection: "column",
 		alignItems: "center",
 		"&:hover": {
@@ -268,6 +351,17 @@ export const commonStyles = (theme) => ({
 		height: "40px",
 		alignItems: "center",
 		marginBottom: "22px",
+		[theme.breakpoints.down("lg")]: {
+			marginBottom: "10px",
+			height: "fit-content",
+		},
+	},
+	imgContainer: {
+		width: "100%",
+		"& img": {
+			width: "100%",
+			objectFit: "contain",
+		},
 	},
 	cardRole: {
 		"&.MuiTypography-root": {
@@ -275,12 +369,18 @@ export const commonStyles = (theme) => ({
 			color: "#1A1A1A",
 			opacity: "0.6",
 			fontWeight: "600",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "16px",
+			},
 		},
 	},
 	ourTeamCardTitle: {
 		"&.MuiTypography-root": {
 			fontSize: "28px",
 			fontWeight: "600",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "16px",
+			},
 		},
 	},
 	ourTeamCardDescription: {
@@ -290,6 +390,9 @@ export const commonStyles = (theme) => ({
 			lineHeight: "22px",
 			color: "#1A1A1A",
 			opacity: "0.6",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "12px",
+			},
 		},
 	},
 	blogsHr: {
@@ -333,12 +436,11 @@ export const commonStyles = (theme) => ({
 		},
 	},
 	blogsCard: {
+		position: "relative",
 		width: "100%",
 		borderRadius: "10px",
-		height: "100%",
-		minHeight: "724px",
 		maxWidth: "456px",
-		padding: "30px 24px",
+		padding: "5% 7%",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
@@ -346,11 +448,58 @@ export const commonStyles = (theme) => ({
 			boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
 		},
 	},
-	blogsCardWrapper: {
+	blogsSection: {
 		width: "100%",
 		maxWidth: "1464px",
 		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+	},
+	blogsCardWrapper: {
+		width: "100%",
+		maxWidth: "1464px",
+		display: "grid",
+		gridTemplateColumns: "repeat(3, 1fr)",
 		gap: "46px",
 		justifyContent: "center",
+		[theme.breakpoints.down("lg")]: {
+			gridTemplateColumns: "repeat(2, 1fr)",
+			width: "90%",
+		},
+		[theme.breakpoints.down("lg")]: {
+			gridTemplateColumns: " 1fr",
+			placeItems: "center",
+		},
+	},
+	carouselBack: {
+		position: "absolute",
+		left: "0px",
+		top: "45%",
+		width: "60px",
+		height: "60px",
+		backgroundColor: "rgba(0, 0, 0, 0.3)",
+		borderRadius: "9999px",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		"& .MuiSvgIcon-root": {
+			color: "white",
+		},
+	},
+	carouselForward: {
+		position: "absolute",
+		right: "0px",
+		top: "45%",
+		width: "60px",
+		height: "60px",
+		backgroundColor: "rgba(0, 0, 0, 0.3)",
+		borderRadius: "9999px",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+
+		"& .MuiSvgIcon-root": {
+			color: "white",
+		},
 	},
 })

@@ -7,6 +7,7 @@ import Blog3Img from "../assets/blogs/blog3.png"
 
 export const teamMembers = [
 	{
+		id: 1,
 		name: "Brajesh Pathak",
 		description:
 			"Brajesh Pathak, a professional with dual qualifications as a Chartered Accountant and Company Secretary, possesses more than ten years of expertise in overseeing venture capital funds that focus on the real estate industry.",
@@ -14,6 +15,7 @@ export const teamMembers = [
 		image: Member1Img,
 	},
 	{
+		id: 2,
 		name: "Deepak Shukla",
 		description:
 			"Deepak Shukla, an alumnus of the Indian Institute of Technology (IIT) Kharagpur and a graduate of the prestigious Indian Institute of Management (IIM) Ahmedabad, has amassed an impressive 11 years of professional experience.",
@@ -22,6 +24,7 @@ export const teamMembers = [
 		image: Member2Img,
 	},
 	{
+		id: 3,
 		name: "Alok Kumar Singh",
 		description:
 			"Alok kumar Singh, An Entrepreneur with pedigree from IIT-BHU and IIML, and more than 25 years of experience in management responsibilities in top tier companies including Infosys, Infosys BPO and Azure Capital.",

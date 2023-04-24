@@ -19,15 +19,24 @@ import {
 	PostBooking,
 	PostRegistration,
 } from "../constants/Offerings"
+import CarrouselButtons from "./CarouselButtons"
+import useWidth from "../hooks/useWidth"
 
 const useStyles = makeStyles(commonStyles)
 
 export default function OurOfferings({ title }) {
+	const { width } = useWidth()
+	const [indexShown, setIndexShown] = useState(0)
 	const theme = useTheme()
 	const classes = useStyles(theme)
 	const [activeTab, setActiveTab] = useState(1)
 	const content = [PreBooking, PostBooking, PostRegistration]
-	const cardContentSelected = content[activeTab - 1]
+	const cardsContentSelected = content[activeTab - 1]
+	const cardSelected = cardsContentSelected[indexShown]
+	const changeTab = (id) => {
+		setActiveTab(id)
+		setIndexShown(0)
+	}
 	return (
 		<>
 			<Box className={classes.offeringsSection}>
@@ -59,26 +68,57 @@ export default function OurOfferings({ title }) {
 								tab.id === activeTab && classes.activeTab
 							}`}
 							key={tab.id}
-							onClick={() => setActiveTab(tab.id)}
+							onClick={() => changeTab(tab.id)}
 						>
 							<Box className={classes.tabNumber}>{tab.id}</Box>
-							<Typography className={classes.tabTitle}>{tab.title}</Typography>
+							{width > 850 || activeTab === tab.id ? (
+								<Typography className={classes.tabTitle}>
+									{tab.title}
+								</Typography>
+							) : null}
 							{tab.id === activeTab && <hr className={classes.hrTab} />}
 						</Box>
 					))}
 				</Box>
 				<Box className={classes.cardsWrapper}>
-					{cardContentSelected.slice(0, 3).map((card) => (
-						<Card key={card.id} className={classes.card}>
+					{width > 850 ? (
+						cardsContentSelected.slice(0, 3).map((card) => (
+							<Card key={card.id} className={classes.card}>
+								<CardMedia className={classes.imgContainer}>
+									<img src={card.media} alt='card-img' />
+								</CardMedia>
+								<CardContent className={classes.contentWrapper}>
+									<Typography className={classes.cardTitle}>
+										{card.header}
+									</Typography>
+									<Typography className={classes.cardDescription}>
+										{card.content}
+									</Typography>
+								</CardContent>
+								<CardActions className={classes.cardActions}>
+									<Button variant='outlined' className={classes.cardButton}>
+										View More
+										<ArrowForward sx={{ ml: "10px", width: "25px" }} />
+									</Button>
+								</CardActions>
+							</Card>
+						))
+					) : (
+						<Card key={cardSelected.id} className={classes.card}>
 							<CardMedia>
-								<img src={card.media} alt='card-img' />
+								<img src={cardSelected.media} alt='card-img' />
 							</CardMedia>
+							<CarrouselButtons
+								indexShown={indexShown}
+								setIndexShown={setIndexShown}
+								maxCards={cardsContentSelected.length}
+							/>
 							<CardContent className={classes.contentWrapper}>
 								<Typography className={classes.cardTitle}>
-									{card.header}
+									{cardSelected.header}
 								</Typography>
 								<Typography className={classes.cardDescription}>
-									{card.content}
+									{cardSelected.content}
 								</Typography>
 							</CardContent>
 							<CardActions className={classes.cardActions}>
@@ -88,7 +128,7 @@ export default function OurOfferings({ title }) {
 								</Button>
 							</CardActions>
 						</Card>
-					))}
+					)}
 				</Box>
 			</Box>
 		</>

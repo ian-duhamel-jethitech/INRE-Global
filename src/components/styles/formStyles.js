@@ -22,17 +22,20 @@ export const formStyles = (theme) => ({
 		},
 	},
 	formInput: {
-		width: "350px",
+		width: "100%",
 		height: "48px",
 	},
 	formButton: {
+		gridColumn: "1/3",
 		"&.MuiButton-root": {
-			marginTop: "35px",
 			width: "350px",
 			height: "48px",
 			fontWeight: "600",
 			fontSize: "18px",
 			textTransform: "none",
+			[theme.breakpoints.down("md")]: {
+				width: "100%",
+			},
 		},
 	},
 	imgContainer: {
@@ -40,6 +43,23 @@ export const formStyles = (theme) => ({
 		width: "40%",
 		[theme.breakpoints.down("lg")]: {
 			display: "none",
+		},
+		[theme.breakpoints.down("md")]: {
+			display: "flex",
+			width: "100%",
+			marginBottom: "12px",
+		},
+	},
+	inputContainer: {
+		width: "100%",
+		display: "inline-grid",
+		gridTemplateColumns: "repeat(2, 350px)",
+		columnGap: "24px",
+		rowGap: "32px",
+		[theme.breakpoints.down("md")]: {
+			display: "flex",
+			flexDirection: "column",
+			columnGap: "0",
 		},
 	},
 	img: {
@@ -53,7 +73,14 @@ export const formStyles = (theme) => ({
 		maxWidth: "1464px",
 	},
 	formLeftSide: {
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "start",
 		width: "60%",
+		[theme.breakpoints.down("lg")]: {
+			width: "100%",
+			alignItems: "center",
+		},
 	},
 	titleContainer: {
 		display: "flex",
@@ -78,37 +105,5 @@ export const formStyles = (theme) => ({
 		height: "5px",
 		backgroundColor: "#002550",
 		textAlign: "center",
-	},
-	homepage: {
-		padding: "70px 0",
-		width: "100%",
-		display: "flex",
-		flexDirection: "column",
-		alignItems: "center",
-		gap: "70px",
-	},
-	higlightedText: {
-		"&.MuiTypography-root": {
-			fontFamily: "Solway",
-			fontWeight: "700",
-			fontSize: "40px",
-		},
-	},
-	formPageSection: {
-		padding: "35px 86px",
-		width: "100%",
-		display: "flex",
-		flexDirection: "column",
-		maxWidth: "1464px",
-		boxShadow: " 0px 0px 10px rgba(0, 0, 0, 0.05)",
-	},
-	heroText: {
-		"&.MuiTypography-root": {
-			fontFamily: "Solway",
-			fontSize: "40px",
-			color: "#FFF",
-			fontWeight: "400",
-		},
-		width: "35%",
 	},
 })

@@ -6,6 +6,10 @@ export const commonStyles = (theme) => ({
 		flexDirection: "column",
 		alignItems: "center",
 		gap: "70px",
+		[theme.breakpoints.down("md")]: {
+			padding: "20px 0",
+			gap: "20px",
+		},
 	},
 	ourTeamPage: {
 		padding: "70px 0",
@@ -32,8 +36,19 @@ export const commonStyles = (theme) => ({
 			color: "#FFF",
 			fontWeight: "400",
 			lineHeight: "48px",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "32px",
+				lineHeight: "40px",
+			},
+			[theme.breakpoints.down("md")]: {
+				fontSize: "14px",
+				lineHeight: "17px",
+			},
 		},
 		width: "30%",
+		[theme.breakpoints.down("lg")]: {
+			width: "40%",
+		},
 	},
 	higlightedText: {
 		"&.MuiTypography-root": {
@@ -41,6 +56,14 @@ export const commonStyles = (theme) => ({
 			fontSize: "40px",
 			fontWeight: "700",
 			lineHeight: "48px",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "32px",
+				lineHeight: "40px",
+			},
+			[theme.breakpoints.down("md")]: {
+				fontSize: "14px",
+				lineHeight: "17px",
+			},
 		},
 	},
 	teamMember: {
@@ -200,6 +223,50 @@ export const commonStyles = (theme) => ({
 			padding: "12px",
 			fontSize: "18px",
 			fontWeight: "600",
+		},
+	},
+	formPageSection: {
+		padding: "35px 86px",
+		width: "100%",
+		display: "flex",
+		flexDirection: "column",
+		maxWidth: "1464px",
+		boxShadow: " 0px 0px 10px rgba(0, 0, 0, 0.05)",
+	},
+	inputContainer: {
+		width: "100%",
+		display: "inline-grid",
+		gridTemplateColumns: "repeat(3, 33%)",
+		columnGap: "24px",
+		rowGap: "32px",
+		[theme.breakpoints.down("lg")]: {
+			gridTemplateColumns: "repeat(2, 50%)",
+		},
+		[theme.breakpoints.down("md")]: {
+			display: "flex",
+			flexDirection: "column",
+			columnGap: "0",
+		},
+	},
+	formButton: {
+		gridColumn: "1/3",
+		"&.MuiButton-root": {
+			width: "50%",
+			height: "48px",
+			fontWeight: "600",
+			fontSize: "18px",
+			textTransform: "none",
+			[theme.breakpoints.down("md")]: {
+				width: "100%",
+			},
+		},
+	},
+	formTitle: {
+		"&.MuiTypography-root": {
+			fontSize: "28px",
+			fontWeight: "600",
+			color: "#002550",
+			marginBottom: "30px",
 		},
 	},
 })

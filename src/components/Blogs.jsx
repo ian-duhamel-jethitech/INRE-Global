@@ -9,16 +9,22 @@ import {
 	Button,
 	useTheme,
 } from "@mui/material"
+import { useState } from "react"
 import { makeStyles } from "@mui/styles"
 import { commonStyles } from "./styles/commonStyles"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { blogs } from "../constants/teamBlogs"
+import useWidth from "../hooks/useWidth"
+import CarrouselButtons from "./CarouselButtons"
 
 const useStyles = makeStyles(commonStyles)
 
 export default function Blogs({ title }) {
+	const [indexShown, setIndexShown] = useState(0)
 	const theme = useTheme()
 	const classes = useStyles(theme)
+	const { width } = useWidth()
+	const blogSelected = blogs[indexShown]
 	return (
 		<Box className={classes.blogsSection}>
 			{title && (
@@ -30,28 +36,72 @@ export default function Blogs({ title }) {
 				</>
 			)}
 			<Box className={classes.blogsCardWrapper}>
-				{blogs.map((card) => (
-					<Card key={card.id} className={classes.blogsCard}>
+				{width > 850 ? (
+					blogs.map((card) => (
+						<Card key={card.id} className={classes.blogsCard}>
+							<CardMedia className={classes.imgContainer}>
+								<img src={card.image} alt='card-img' />
+							</CardMedia>
+							<CardContent className={classes.contentWrapper}>
+								<Box className={classes.blogsDateContainer}>
+									<Box>
+										<CalendarMonth />
+										<Typography className={classes.blogsDate}>
+											{card.date}
+										</Typography>
+									</Box>
+									<Typography className={classes.cardAuthor}>
+										By {card.author}
+									</Typography>
+								</Box>
+								<Typography className={classes.blogTitle}>
+									{card.title}
+								</Typography>
+								<Typography className={classes.ourTeamCardDescription}>
+									{card.description}
+								</Typography>
+							</CardContent>
+							<CardActions className={classes.cardActions}>
+								<Button
+									variant='outlined'
+									component={Link}
+									reloadDocument
+									to={`/blogs/${card.id}`}
+									className={classes.cardButton}
+								>
+									View More
+									<ArrowForward sx={{ ml: "10px", width: "25px" }} />
+								</Button>
+							</CardActions>
+						</Card>
+					))
+				) : (
+					<Card key={blogSelected.id} className={classes.blogsCard}>
 						<CardMedia>
-							<img src={card.image} alt='card-img' />
-						</CardMedia>
+							<img src={blogSelected.image} alt='card-img' />
+						</CardMedia>{" "}
+						<CarrouselButtons
+							indexShown={indexShown}
+							setIndexShown={setIndexShown}
+							maxCards={blogs.length}
+						/>
 						<CardContent className={classes.contentWrapper}>
 							<Box className={classes.blogsDateContainer}>
 								<Box>
 									<CalendarMonth />
 									<Typography className={classes.blogsDate}>
-										{card.date}
+										{blogSelected.date}
 									</Typography>
 								</Box>
 								<Typography className={classes.cardAuthor}>
-									By {card.author}
+									By {blogSelected.author}
 								</Typography>
 							</Box>
 							<Typography className={classes.blogTitle}>
-								{card.title}
+								{blogSelected.title}
 							</Typography>
 							<Typography className={classes.ourTeamCardDescription}>
-								{card.description}
+								{blogSelected.description}
 							</Typography>
 						</CardContent>
 						<CardActions className={classes.cardActions}>
@@ -59,7 +109,7 @@ export default function Blogs({ title }) {
 								variant='outlined'
 								component={Link}
 								reloadDocument
-								to={`/blogs/${card.id}`}
+								to={`/blogs/${blogSelected.id}`}
 								className={classes.cardButton}
 							>
 								View More
@@ -67,7 +117,7 @@ export default function Blogs({ title }) {
 							</Button>
 						</CardActions>
 					</Card>
-				))}
+				)}
 			</Box>
 		</Box>
 	)

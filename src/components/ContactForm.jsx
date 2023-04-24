@@ -4,11 +4,10 @@ import {
 	Autocomplete,
 	TextField,
 	Button,
-	Grid,
+	useTheme,
 } from "@mui/material"
 import ContactUsImg from "../assets/banners/contactUs.png"
 import { makeStyles } from "@mui/styles"
-import { useTheme } from "@mui/material"
 import { formStyles } from "./styles/formStyles"
 import { Countries } from "../constants/Countries"
 import { MuiTelInput } from "mui-tel-input"
@@ -39,79 +38,59 @@ const ContactForm = () => {
 					<Typography className={classes.formTitle}>
 						Please provide below details
 					</Typography>
-					<Box>
-						<Grid
-							container
-							rowSpacing={"48px"}
-							columnSpacing={"24px"}
-							className={classes.Grid}
-						>
-							<Grid item>
-								<TextField label='Full name' className={classes.formInput} />
-							</Grid>
-							<Grid item>
+					<Box className={classes.inputContainer}>
+						<TextField label='Full name' className={classes.formInput} />
+						<TextField
+							placeholder='example@gmail.com'
+							label='Email address'
+							helperText='Please enter a valid e-mail'
+							className={classes.formInput}
+						/>
+						<MuiTelInput
+							defaultCountry='IN'
+							placeholder={"9876543210"}
+							value={phone}
+							onChange={handleChange}
+							className={classes.formInput}
+						/>
+						<Autocomplete
+							options={Countries}
+							getOptionLabel={(option) => option.label}
+							className={classes.formInput}
+							renderOption={(props, option) => (
+								<Box
+									component='li'
+									sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
+									{...props}
+								>
+									<img
+										loading='lazy'
+										width='20'
+										src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+										srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+										alt=''
+									/>
+									{option.label}
+								</Box>
+							)}
+							renderInput={(params) => (
 								<TextField
-									placeholder='example@gmail.com'
-									label='Email address'
-									helperText='Please enter a valid e-mail'
+									{...params}
+									label='Country'
 									className={classes.formInput}
+									inputProps={{
+										...params.inputProps,
+										autoComplete: "new-password",
+									}}
 								/>
-							</Grid>
-							<Grid item>
-								<MuiTelInput
-									defaultCountry='IN'
-									placeholder={"9876543210"}
-									value={phone}
-									onChange={handleChange}
-									className={classes.formInput}
-								/>
-							</Grid>
-
-							<Grid item>
-								<Autocomplete
-									options={Countries}
-									getOptionLabel={(option) => option.label}
-									className={classes.formInput}
-									renderOption={(props, option) => (
-										<Box
-											component='li'
-											sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
-											{...props}
-										>
-											<img
-												loading='lazy'
-												width='20'
-												src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
-												srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
-												alt=''
-											/>
-											{option.label}
-										</Box>
-									)}
-									renderInput={(params) => (
-										<TextField
-											{...params}
-											label='Country'
-											className={classes.formInput}
-											inputProps={{
-												...params.inputProps,
-												autoComplete: "new-password",
-											}}
-										/>
-									)}
-								/>
-							</Grid>
-							<Grid item>
-								<Autocomplete
-									disablePortal
-									options={stages}
-									className={classes.formInput}
-									renderInput={(params) => (
-										<TextField {...params} label='Stage' />
-									)}
-								/>
-							</Grid>
-						</Grid>
+							)}
+						/>
+						<Autocomplete
+							disablePortal
+							options={stages}
+							className={classes.formInput}
+							renderInput={(params) => <TextField {...params} label='Stage' />}
+						/>
 						<Button variant='contained' className={classes.formButton}>
 							Submit
 						</Button>
