@@ -104,7 +104,7 @@ export const PostRegistration = [
 ]
 
 export const tabs = [
-	{ id: 1, title: "Pre-Booking" },
-	{ id: 2, title: "Post-Booking & Pre-Registration" },
-	{ id: 3, title: "Post-Registration" },
+	{ id: 1, title: "Pre-Booking", slug: "prebooking" },
+	{ id: 2, title: "Post-Booking & Pre-Registration", slug: "postbooking" },
+	{ id: 3, title: "Post-Registration", slug: "postregistration" },
 ]
