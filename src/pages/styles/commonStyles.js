@@ -226,7 +226,8 @@ export const commonStyles = (theme) => ({
 		},
 	},
 	formPageSection: {
-		padding: "35px 86px",
+		position: "relative",
+		padding: "35px 50px",
 		width: "100%",
 		display: "flex",
 		flexDirection: "column",
@@ -234,11 +235,12 @@ export const commonStyles = (theme) => ({
 		boxShadow: " 0px 0px 10px rgba(0, 0, 0, 0.05)",
 	},
 	inputContainer: {
-		width: "100%",
+		position: "relative",
+		width: "90%",
 		display: "inline-grid",
 		gridTemplateColumns: "repeat(3, 33%)",
-		columnGap: "24px",
-		rowGap: "32px",
+		columnGap: "50px",
+		rowGap: "35px",
 		[theme.breakpoints.down("lg")]: {
 			gridTemplateColumns: "repeat(2, 50%)",
 		},
@@ -251,7 +253,7 @@ export const commonStyles = (theme) => ({
 	formButton: {
 		gridColumn: "1/3",
 		"&.MuiButton-root": {
-			width: "50%",
+			width: "47.5%",
 			height: "48px",
 			fontWeight: "600",
 			fontSize: "18px",
@@ -267,6 +269,19 @@ export const commonStyles = (theme) => ({
 			fontWeight: "600",
 			color: "#002550",
 			marginBottom: "30px",
+		},
+	},
+	contactUsLink: {
+		"&.MuiTypography-root": {
+			fontSize: "18px",
+			fontWeight: "400",
+			color: "#000",
+			"& .MuiTypography-root": {
+				textDecoration: "none",
+				fontSize: "18px",
+				fontWeight: "600",
+				color: "#002550",
+			},
 		},
 	},
 })

@@ -63,13 +63,9 @@ export default function BlogPage() {
 							Next Post <ArrowForward />
 						</Button>
 					</Box>
-					<Typography>
+					<Typography className={classes.contactUsLink}>
 						For more insightful details Contact Us today,{" "}
-						<Typography
-							component={Link}
-							to='/contactus'
-							className={classes.contactUs}
-						>
+						<Typography component={Link} to='/contactus'>
 							Click Here
 						</Typography>
 					</Typography>

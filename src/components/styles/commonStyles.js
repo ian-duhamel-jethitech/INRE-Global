@@ -8,8 +8,9 @@ export const commonStyles = (theme) => ({
 		display: "flex",
 		alignItems: "center",
 		borderRadius: "50px",
+
 		[theme.breakpoints.down("md")]: {
-			height: "160px",
+			height: "50%",
 		},
 	},
 	textWrapper: {
@@ -139,6 +140,7 @@ export const commonStyles = (theme) => ({
 	},
 	sectionDescription: {
 		"&.MuiTypography-root": {
+			textAlign: "center",
 			marginTop: "20px",
 			fontSize: "16px",
 			marginBottom: "35px",
@@ -150,6 +152,13 @@ export const commonStyles = (theme) => ({
 		justifyContent: "center",
 		gap: "30px",
 		borderRadius: "2.5px",
+		[theme.breakpoints.down("lg")]: {
+			gap: "10px",
+		},
+
+		[theme.breakpoints.down("md")]: {
+			width: "90%",
+		},
 	},
 	tab: {
 		position: "relative",
@@ -194,10 +203,12 @@ export const commonStyles = (theme) => ({
 	},
 	activeTab: {
 		backgroundColor: "#CCD3DC",
-		width: "100%",
-		display: "flex",
-		justifyContent: "center",
-		maxWidth: "470px",
+		[theme.breakpoints.down("md")]: {
+			width: "100%",
+			display: "flex",
+			justifyContent: "center",
+			maxWidth: "470px",
+		},
 	},
 	hrTab: {
 		position: "absolute",
