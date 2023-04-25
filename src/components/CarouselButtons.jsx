@@ -8,14 +8,19 @@ import { commonStyles } from "./styles/commonStyles"
 
 const useStyles = makeStyles(commonStyles)
 
-const CarouselButtons = ({ indexShown, setIndexShown, maxCards }) => {
+const CarouselButtons = ({
+	indexShown,
+	setIndexShown,
+	maxCards,
+	sliderButtons,
+}) => {
 	const theme = useTheme()
 	const classes = useStyles(theme)
 	return (
 		<>
 			{indexShown > 0 && (
 				<Box
-					className={classes.carouselBack}
+					className={sliderButtons ? classes.sliderBack : classes.carouselBack}
 					onClick={() => indexShown > 0 && setIndexShown(indexShown - 1)}
 				>
 					<ArrowBackIosIcon />
@@ -23,7 +28,9 @@ const CarouselButtons = ({ indexShown, setIndexShown, maxCards }) => {
 			)}
 			{indexShown < maxCards - 1 && (
 				<Box
-					className={classes.carouselForward}
+					className={
+						sliderButtons ? classes.sliderForward : classes.carouselForward
+					}
 					onClick={() =>
 						indexShown < maxCards - 1 && setIndexShown(indexShown + 1)
 					}

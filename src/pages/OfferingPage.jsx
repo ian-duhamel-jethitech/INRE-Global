@@ -56,7 +56,7 @@ export default function OfferingPage() {
 			<HeroSection banner={offering.media} />
 			<Box className={classes.blogSection}>
 				<Box className={classes.blogHeader}>
-					<Typography className={classes.blogAuthor}>
+					<Typography className={classes.blogDate}>
 						{offering.header}
 					</Typography>
 				</Box>

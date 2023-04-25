@@ -19,6 +19,9 @@ export const formStyles = (theme) => ({
 			fontWeight: "600",
 			color: "#002550",
 			marginBottom: "30px",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "24px",
+			},
 		},
 	},
 	formInput: {
@@ -101,6 +104,12 @@ export const formStyles = (theme) => ({
 			fontWeight: "700",
 			color: "#002550",
 			lineHeight: "33px",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "24px",
+			},
+			[theme.breakpoints.down("md")]: {
+				fontSize: "20px",
+			},
 		},
 	},
 	offeringsHr: {
@@ -109,5 +118,10 @@ export const formStyles = (theme) => ({
 		height: "5px",
 		backgroundColor: "#002550",
 		textAlign: "center",
+
+		[theme.breakpoints.down("lg")]: {
+			margin: "0 0 25px  0",
+			width: "100px",
+		},
 	},
 })

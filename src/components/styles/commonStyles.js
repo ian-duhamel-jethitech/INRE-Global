@@ -60,10 +60,15 @@ export const commonStyles = (theme) => ({
 	},
 	whoWeAreTextHeader: {
 		"&.MuiTypography-root": {
+			color: "#002550",
 			marginBottom: "10px",
 			fontSize: "28px",
 			fontWeight: "600",
 			lineHeight: "38px",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "20px",
+			},
+
 			[theme.breakpoints.down("md")]: {
 				fontSize: "16px",
 			},
@@ -79,6 +84,9 @@ export const commonStyles = (theme) => ({
 			maxHeight: "196px",
 			overflow: "hidden",
 			textOverflow: "ellipsis",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "16px",
+			},
 			[theme.breakpoints.down("md")]: {
 				fontSize: "12px",
 			},
@@ -130,6 +138,12 @@ export const commonStyles = (theme) => ({
 			fontWeight: "700",
 			color: "#002550",
 			lineHeight: "33px",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "24px",
+			},
+			[theme.breakpoints.down("md")]: {
+				fontSize: "20px",
+			},
 		},
 	},
 	offeringsHr: {
@@ -137,6 +151,9 @@ export const commonStyles = (theme) => ({
 		height: "5px",
 		backgroundColor: "#002550",
 		textAlign: "center",
+		[theme.breakpoints.down("lg")]: {
+			width: "120px",
+		},
 	},
 	linkHighlighted: {
 		textDecoration: "none",
@@ -145,6 +162,7 @@ export const commonStyles = (theme) => ({
 		color: "#002550",
 	},
 	sectionDescription: {
+		width: "90%",
 		"&.MuiTypography-root": {
 			textAlign: "center",
 			marginTop: "20px",
@@ -224,6 +242,7 @@ export const commonStyles = (theme) => ({
 		backgroundColor: "#002550",
 	},
 	cardsWrapper: {
+		position: "relative",
 		width: "100%",
 		maxWidth: "1464px",
 		display: "grid",
@@ -270,8 +289,11 @@ export const commonStyles = (theme) => ({
 			fontSize: "28px",
 			fontWeight: "600",
 			marginBottom: "22px",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "24px",
+			},
 			[theme.breakpoints.down("md")]: {
-				fontSize: "20px",
+				fontSize: "18px",
 			},
 		},
 	},
@@ -455,6 +477,9 @@ export const commonStyles = (theme) => ({
 			fontSize: "28px",
 			fontWeight: "600",
 			marginBottom: "10px",
+			[theme.breakpoints.down("lg")]: {
+				fontSize: "16px",
+			},
 		},
 	},
 	blogsCard: {
@@ -462,7 +487,6 @@ export const commonStyles = (theme) => ({
 		width: "100%",
 		borderRadius: "10px",
 		maxWidth: "456px",
-		minHeight: "720px",
 		padding: "5% 7%",
 		display: "flex",
 		flexDirection: "column",
@@ -525,6 +549,44 @@ export const commonStyles = (theme) => ({
 
 		"& .MuiSvgIcon-root": {
 			color: "white",
+		},
+	},
+	sliderBack: {
+		position: "absolute",
+		left: "-5%",
+		top: "45%",
+		width: "60px",
+		height: "60px",
+		backgroundColor: "rgba(0, 0, 0, 0.3)",
+		borderRadius: "9999px",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		zIndex: 1,
+		"& .MuiSvgIcon-root": {
+			color: "white",
+		},
+		[theme.breakpoints.down("lg")]: {
+			left: "2%",
+		},
+	},
+	sliderForward: {
+		position: "absolute",
+		right: "-5%",
+		top: "45%",
+		width: "60px",
+		height: "60px",
+		backgroundColor: "rgba(0, 0, 0, 0.3)",
+		borderRadius: "9999px",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		zIndex: 1,
+		"& .MuiSvgIcon-root": {
+			color: "white",
+		},
+		[theme.breakpoints.down("lg")]: {
+			right: "2%",
 		},
 	},
 })

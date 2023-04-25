@@ -81,11 +81,15 @@ export const commonStyles = (theme) => ({
 	teamMemberHead: {
 		display: "flex",
 		marginBottom: "30px",
+		alignItems: "center",
 	},
 	teamMemberName: {
 		"&.MuiTypography-root": {
 			fontSize: "28px",
 			fontWeight: "600",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "24px",
+			},
 		},
 	},
 	teamMemberRole: {
@@ -94,6 +98,10 @@ export const commonStyles = (theme) => ({
 			fontWeight: "400",
 			color: "#1a1a1a",
 			opacity: "0.6",
+
+			[theme.breakpoints.down("md")]: {
+				fontSize: "18px",
+			},
 		},
 	},
 	teamMemberDescription: {
@@ -102,6 +110,9 @@ export const commonStyles = (theme) => ({
 			fontWeight: "400",
 			color: "#1a1a1a",
 			opacity: "0.6",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "16px",
+			},
 		},
 	},
 	teamMemberImg: {
@@ -173,6 +184,10 @@ export const commonStyles = (theme) => ({
 		alignItems: "center",
 		"&.MuiTypography-root": {
 			fontSize: "24px",
+
+			[theme.breakpoints.down("md")]: {
+				fontSize: "20px",
+			},
 		},
 		"& .MuiSvgIcon-root": {
 			width: "20px",
@@ -210,15 +225,23 @@ export const commonStyles = (theme) => ({
 			fontWeight: "600",
 			color: "#1A1A1A",
 			opacity: "0.6",
+
+			[theme.breakpoints.down("md")]: {
+				fontSize: "20px",
+			},
 		},
 	},
 	blogDescription: {
 		"&.MuiTypography-root": {
-			fontSize: "24px",
+			fontSize: "20px",
 			fontWeight: "600",
 			color: "#1A1A1A",
 			opacity: "0.6",
 			marginBottom: "35px",
+
+			[theme.breakpoints.down("md")]: {
+				fontSize: "16px",
+			},
 		},
 	},
 	blogHr: {
@@ -286,6 +309,7 @@ export const commonStyles = (theme) => ({
 			marginBottom: "30px",
 			[theme.breakpoints.down("md")]: {
 				textAlign: "center",
+				fontSize: "20px",
 			},
 		},
 	},

@@ -27,6 +27,7 @@ const useStyles = makeStyles(commonStyles)
 export default function OurOfferings({ title }) {
 	const { width } = useWidth()
 	const [indexShown, setIndexShown] = useState(0)
+	const [groupShown, setGroupShown] = useState(0)
 	const theme = useTheme()
 	const classes = useStyles(theme)
 	const [activeTab, setActiveTab] = useState(1)
@@ -36,7 +37,9 @@ export default function OurOfferings({ title }) {
 	const changeTab = (id) => {
 		setActiveTab(id)
 		setIndexShown(0)
+		setGroupShown(0)
 	}
+	console.log(groupShown)
 	return (
 		<>
 			<Box className={classes.offeringsSection}>
@@ -82,32 +85,44 @@ export default function OurOfferings({ title }) {
 				</Box>
 				<Box className={classes.cardsWrapper}>
 					{width > 850 ? (
-						cardsContentSelected.slice(0, 3).map((card) => (
-							<Card key={card.id} className={classes.card}>
-								<CardMedia className={classes.imgContainer}>
-									<img src={card.media} alt='card-img' />
-								</CardMedia>
-								<CardContent className={classes.contentWrapper}>
-									<Typography className={classes.cardTitle}>
-										{card.header}
-									</Typography>
-									<Typography className={classes.cardDescription}>
-										{card.content}
-									</Typography>
-								</CardContent>
-								<CardActions className={classes.cardActions}>
-									<Button
-										variant='outlined'
-										className={classes.cardButton}
-										component={Link}
-										to={`/offerings/${tabs[activeTab - 1]?.slug}/${card.id}`}
-									>
-										View More
-										<ArrowForward sx={{ ml: "10px", width: "25px" }} />
-									</Button>
-								</CardActions>
-							</Card>
-						))
+						<>
+							<CarrouselButtons
+								sliderButtons
+								indexShown={groupShown}
+								setIndexShown={setGroupShown}
+								maxCards={cardsContentSelected.length - 2}
+							/>
+							{cardsContentSelected
+								.slice(groupShown, groupShown + 3)
+								.map((card) => (
+									<Card key={card.id} className={classes.card}>
+										<CardMedia className={classes.imgContainer}>
+											<img src={card.media} alt='card-img' />
+										</CardMedia>
+										<CardContent className={classes.contentWrapper}>
+											<Typography className={classes.cardTitle}>
+												{card.header}
+											</Typography>
+											<Typography className={classes.cardDescription}>
+												{card.content}
+											</Typography>
+										</CardContent>
+										<CardActions className={classes.cardActions}>
+											<Button
+												variant='outlined'
+												className={classes.cardButton}
+												component={Link}
+												to={`/offerings/${tabs[activeTab - 1]?.slug}/${
+													card.id
+												}`}
+											>
+												View More
+												<ArrowForward sx={{ ml: "10px", width: "25px" }} />
+											</Button>
+										</CardActions>
+									</Card>
+								))}
+						</>
 					) : (
 						<Card key={cardSelected.id} className={classes.card}>
 							<CardMedia>
