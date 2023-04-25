@@ -27,7 +27,6 @@ const Navbar = () => {
 	useEffect(() => {
 		setIsActive(location.pathname)
 	}, [location.pathname])
-	console.log(location.pathname)
 	const theme = useTheme()
 	const { width } = useWidth()
 	if (width > 850 && isOpen) {

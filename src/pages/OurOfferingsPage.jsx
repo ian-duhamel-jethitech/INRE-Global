@@ -1,8 +1,7 @@
 import { makeStyles } from "@mui/styles"
-import { useTheme } from "@mui/material"
 import { commonStyles } from "./styles/commonStyles"
 import bannerOfferings from "../assets/banners/bannerOfferings.png"
-import { Box, Typography } from "@mui/material"
+import { useTheme, Box, Typography } from "@mui/material"
 import HeroSection from "../components/HeroSection"
 import OurOfferings from "../components/OurOfferings"
 

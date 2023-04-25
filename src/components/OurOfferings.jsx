@@ -39,7 +39,6 @@ export default function OurOfferings({ title }) {
 		setIndexShown(0)
 		setGroupShown(0)
 	}
-	console.log(groupShown)
 	return (
 		<>
 			<Box className={classes.offeringsSection}>

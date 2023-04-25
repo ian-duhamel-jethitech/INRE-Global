@@ -32,10 +32,7 @@ export default function ContactUsPage() {
 		<section className={classes.homepage}>
 			<HeroSection banner={ContactUsBanner}>
 				<Typography className={classes.heroText}>
-					<Typography
-						className={classes.higlightedText}
-						style={{ width: "120%" }}
-					>
+					<Typography component={"span"} className={classes.higlightedText}>
 						Are you eager to connect?
 					</Typography>{" "}
 					We would be delighted to hear from you! Here is how..

@@ -6,7 +6,6 @@ import {
 	AccordionDetails,
 	useTheme,
 } from "@mui/material"
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import { useState } from "react"
 import HeroSection from "../components/HeroSection"
 import FAQsBanner from "../assets/banners/FAQs banner.png"

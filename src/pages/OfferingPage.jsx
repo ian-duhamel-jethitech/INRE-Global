@@ -19,8 +19,7 @@ import {
 	PostBooking,
 	PostRegistration,
 } from "../constants/Offerings"
-import { ArrowBack, ArrowForward, CalendarMonth } from "@mui/icons-material"
-import OurOfferings from "../components/OurOfferings"
+import { ArrowBack, ArrowForward } from "@mui/icons-material"
 import useWidth from "../hooks/useWidth"
 
 const useStyles = makeStyles(commonStyles)
