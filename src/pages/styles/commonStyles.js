@@ -139,6 +139,7 @@ export const commonStyles = (theme) => ({
 		alignItems: "center",
 	},
 	goBack: {
+		marginLeft: "30px",
 		width: "100%",
 		maxWidth: "1464px",
 		display: "flex",
@@ -299,6 +300,122 @@ export const commonStyles = (theme) => ({
 				fontWeight: "600",
 				color: "#002550",
 			},
+		},
+	},
+	card: {
+		position: "relative",
+		width: "100%",
+		maxHeight: "680px",
+		maxWidth: "456px",
+		padding: "30px 24px",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		"&:hover": {
+			boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
+		},
+		[theme.breakpoints.down("md")]: {
+			width: "90%",
+			margin: "0 auto",
+		},
+	},
+
+	cardActions: {
+		"&.MuiCardActions-root": {
+			margin: 0,
+			padding: 0,
+			alignSelf: "flex-start",
+			width: "100%",
+		},
+	},
+	cardButton: {
+		height: "64px",
+		"&.MuiButton-root": {
+			fontWeight: "600",
+			width: "fit-content",
+			padding: "0px 40px",
+			marginTop: "10px",
+			fontSize: "18px",
+			color: "#002550",
+			textTransform: "none",
+			borderColor: "#002550",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "16px",
+				width: "100%",
+			},
+		},
+	},
+	contentWrapper: {
+		"&.MuiCardContent-root": {
+			marginTop: "30px",
+			width: "100%",
+			padding: 0,
+			flexGrow: 1,
+			[theme.breakpoints.down("md")]: {
+				marginTop: "10px",
+			},
+		},
+	},
+	cardTitle: {
+		"&.MuiTypography-root": {
+			fontSize: "28px",
+			fontWeight: "600",
+			marginBottom: "22px",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "20px",
+			},
+		},
+	},
+	cardDescription: {
+		"&.MuiTypography-root": {
+			fontSize: "18px",
+			fontWeight: "400",
+			lineHeight: "24px",
+			color: "#1A1A1A",
+			opacity: "0.6",
+			[theme.breakpoints.down("md")]: {
+				fontSize: "12px",
+			},
+		},
+	},
+	sectionTitle: {
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		padding: "0 0 10px 0",
+		"&.MuiTypography-root": {
+			fontSize: "32px",
+			fontWeight: "700",
+			color: "#002550",
+			lineHeight: "33px",
+		},
+	},
+	offeringsHr: {
+		width: "200px",
+		height: "5px",
+		backgroundColor: "#002550",
+		textAlign: "center",
+	},
+	titleContainer: {
+		width: "100%",
+		marginBottom: "35px",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		textDecoration: "none",
+	},
+	cardsWrapper: {
+		width: "100%",
+		maxWidth: "1464px",
+		display: "grid",
+		gridTemplateColumns: "repeat(3, 1fr)",
+		gap: "24px",
+		marginTop: "35px",
+		[theme.breakpoints.down("lg")]: {
+			gap: "20px",
+		},
+		[theme.breakpoints.down("md")]: {
+			gridTemplateColumns: "1fr",
 		},
 	},
 })

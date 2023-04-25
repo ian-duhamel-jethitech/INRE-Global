@@ -1,8 +1,8 @@
 import { useTheme } from "@mui/material/styles"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { makeStyles } from "@mui/styles"
 import { navbarStyles } from "./styles/navbarStyles"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { Drawer, Box, Button, Typography, List, ListItem } from "@mui/material"
 import Menu from "@mui/icons-material/Menu"
 import WhiteLogo from "../assets/logo/WhiteLogo.png"
@@ -21,7 +21,13 @@ const navbarItems = [
 ]
 
 const Navbar = () => {
+	const [isActive, setIsActive] = useState("")
 	const [isOpen, setIsOpen] = useState(false)
+	const location = useLocation()
+	useEffect(() => {
+		setIsActive(location.pathname)
+	}, [location.pathname])
+	console.log(location.pathname)
 	const theme = useTheme()
 	const { width } = useWidth()
 	if (width > 850 && isOpen) {
@@ -44,7 +50,9 @@ const Navbar = () => {
 								<ListItem
 									component={Link}
 									to={item.link}
-									className={classes.navOptions}
+									className={`${classes.navOptions} ${
+										isActive === item.link && classes.navOptionActive
+									}`}
 									key={item.text}
 								>
 									<Typography className={classes.navOptionsText}>
@@ -85,7 +93,9 @@ const Navbar = () => {
 					<ListItem
 						component={Link}
 						to={item.link}
-						className={classes.drawerOptions}
+						className={`${classes.drawerOptions} ${
+							isActive === item.link && classes.drawerOptionsActive
+						}`}
 						key={item.text}
 					>
 						<Typography className={classes.drawerOptionsText}>

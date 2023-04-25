@@ -16,10 +16,10 @@ const SocialBarData = [
 	{ logo: InstagramLogo, text: "Instagram" },
 ]
 const companyLinks = [
-	{ text: "Home", href: "#" },
-	{ text: "Our Team", href: "#" },
-	{ text: "Contact Us", href: "#" },
-	{ text: "Blogs", href: "#" },
+	{ text: "Home", href: "/" },
+	{ text: "Our Team", href: "/team" },
+	{ text: "Contact Us", href: "/contactus" },
+	{ text: "Our Offerings", href: "/offerings" },
 ]
 
 const contactInfo = [
@@ -55,8 +55,19 @@ const Footer = () => {
 						<Typography className={classes.footerTitle}>
 							Useful Links
 						</Typography>
-						<Link to={"/"} className={classes.footerOptions} underline='none'>
+						<Link
+							to={"/blogs"}
+							className={classes.footerOptions}
+							underline='none'
+						>
 							<Typography>Blogs</Typography>
+						</Link>
+						<Link
+							to={"/faqs"}
+							className={classes.footerOptions}
+							underline='none'
+						>
+							<Typography>FAQs</Typography>
 						</Link>
 					</Box>
 					<Box className={classes.footerContact}>

@@ -127,7 +127,14 @@ export default function OurOfferings({ title }) {
 								</Typography>
 							</CardContent>
 							<CardActions className={classes.cardActions}>
-								<Button variant='outlined' className={classes.cardButton}>
+								<Button
+									variant='outlined'
+									className={classes.cardButton}
+									component={Link}
+									to={`/offerings/${tabs[activeTab - 1]?.slug}/${
+										cardSelected.id
+									}`}
+								>
 									View More
 									<ArrowForward sx={{ ml: "10px", width: "25px" }} />
 								</Button>

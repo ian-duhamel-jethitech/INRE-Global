@@ -78,14 +78,17 @@ export const navbarStyles = (theme) => ({
 			color: "#01244A",
 			display: "flex",
 			fontWeight: "400",
-			"&:focus": {
-				opacity: "1",
-				fontWeight: "600",
-				color: "#002550",
-				backgroundColor: "rgba(204, 211, 220, 0.1)",
-			},
 		},
 	},
+	drawerOptionsActive: {
+		"&.MuiListItem-root": {
+			opacity: "1",
+			fontWeight: "600",
+			color: "#002550",
+			backgroundColor: "rgba(204, 211, 220, 0.1)",
+		},
+	},
+
 	drawerOptionsText: {
 		"&.MuiTypography-root": {
 			fontSize: "18px",
@@ -123,10 +126,10 @@ export const navbarStyles = (theme) => ({
 			textAlign: "center",
 			display: "flex",
 			justifyContent: "center",
-			"&:hover": {
-				borderBottom: "4px solid #002550",
-			},
 		},
+	},
+	navOptionActive: {
+		borderBottom: "4px solid #002550",
 	},
 	navOptionsText: {
 		"&.MuiTypography-root": {
