@@ -121,7 +121,6 @@ export const formStyles = (theme) => ({
 
 		[theme.breakpoints.down("lg")]: {
 			margin: "0 0 25px  0",
-			width: "100px",
 		},
 	},
 })
